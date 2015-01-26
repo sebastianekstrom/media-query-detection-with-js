@@ -4,6 +4,7 @@ var Z63 = (function (parent, $) {
     var MediaQueryListener = function() {
         this.afterElement = window.getComputedStyle ? window.getComputedStyle(document.body, ':after') : false;
         this.currentBreakpoint = '';
+        this.lastBreakpoint = '';
         this.init();
     };
 
@@ -24,7 +25,12 @@ var Z63 = (function (parent, $) {
 
             $(window).on('resize orientationchange load', function() {
                 self.currentBreakpoint = self.afterElement.getPropertyValue('content');
-                $(window).trigger('breakpoint-change', self.currentBreakpoint);
+                
+                if (self.currentBreakpoint !== self.lastBreakpoint) {
+                    $(window).trigger('breakpoint-change', self.currentBreakpoint);
+                    self.lastBreakpoint = self.currentBreakpoint;
+                }
+                
             });
         }
 
