@@ -1,0 +1,47 @@
+@media only screen and (min-width: 25em) {
+  body:after {
+    content: "bp-small";
+    display: none;
+  }
+}
+@media only screen and (min-width: 35em) {
+  body:after {
+    content: "bp-medium";
+    display: none;
+  }
+}
+@media only screen and (min-width: 65em) {
+  body:after {
+    content: "bp-large";
+    display: none;
+  }
+}
+
+html {
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  font-size: 4vw;
+  font-family: sans-serif;
+  background: #E33D61;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-weight: normal;
+}
+
+span {
+  display: block;
+  color: #812236;
+  font-weight: bold;
+  font-size: 5.5vw;
+}

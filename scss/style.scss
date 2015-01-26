@@ -1,0 +1,82 @@
+/* ===========================================
+   Defining media queries
+   =========================================== */
+
+@mixin bp-huge {
+  @media only screen and (min-width: 65em) {
+    @content;    
+  }  
+}
+
+@mixin bp-medium {
+  @media only screen and (min-width: 35em) {
+    @content;    
+  }  
+}
+
+@mixin bp-small {
+  @media only screen and (min-width: 25em) {
+    @content;    
+  }  
+}
+
+/* ===========================================
+   Mixin for writing out breakpoint names in
+   an after pseudo element
+   =========================================== */
+
+@mixin define-breakpoint($name) {
+	&:after {
+		content: $name;
+		display: none;
+	}
+}
+
+/* ===========================================
+   Calling our writing-out function
+   =========================================== */
+
+body {
+    @include bp-small(){
+        @include define-breakpoint("bp-small");
+    }  
+
+    @include bp-medium(){
+        @include define-breakpoint("bp-medium");
+    }
+  
+    @include bp-huge(){
+        @include define-breakpoint("bp-large");
+    }
+}
+
+
+/* ===========================================
+   Demo styling only
+   =========================================== */
+
+html {
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  font-size: 4vw;
+  font-family: sans-serif;
+  background: #E33D61;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  position: relative;
+  top: 50%;  
+  transform: translateY(-50%);
+  font-weight: normal;
+}
+
+span {
+  display: block;
+  color: #812236;
+  font-weight: bold;
+  font-size: 5.5vw;
+}
