@@ -24,7 +24,8 @@ var Z63 = (function (parent, $) {
             var self = this;
 
             $(window).on('resize orientationchange load', function() {
-                self.currentBreakpoint = self.afterElement.getPropertyValue('content');
+                // Regexp for removing quotes added by various browsers
+                self.currentBreakpoint = self.afterElement.getPropertyValue('content').replace(/^["']|["']$/g, '');
                 
                 if (self.currentBreakpoint !== self.lastBreakpoint) {
                     $(window).trigger('breakpoint-change', self.currentBreakpoint);
