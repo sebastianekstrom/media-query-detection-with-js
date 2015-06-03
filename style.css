@@ -1,3 +1,13 @@
+/* ===========================================
+   Defining media queries
+   =========================================== */
+/* ===========================================
+   Mixin for writing out breakpoint names in
+   an after pseudo element
+   =========================================== */
+/* ===========================================
+   Calling our writing-out function
+   =========================================== */
 @media only screen and (min-width: 25em) {
   body:after {
     content: "bp-small";
@@ -17,6 +27,9 @@
   }
 }
 
+/* ===========================================
+   Demo styling only
+   =========================================== */
 html {
   height: 100%;
   -webkit-transform-style: preserve-3d;
@@ -34,8 +47,8 @@ body {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
   font-weight: normal;
 }
 
