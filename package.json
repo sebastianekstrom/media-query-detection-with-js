@@ -2,7 +2,6 @@
   "name": "Z63MQDetectWithJS",
   "preferGlobal": "false",
   "version": "0.1.0",
-  "description": "Description",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "^0.8.2",

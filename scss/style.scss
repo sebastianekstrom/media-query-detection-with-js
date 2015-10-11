@@ -3,21 +3,21 @@
    =========================================== */
 
 @mixin bp-huge {
-  @media only screen and (min-width: 65em) {
-    @content;    
-  }  
+    @media only screen and (min-width: 65em) {
+      @content;
+    }  
 }
 
 @mixin bp-medium {
-  @media only screen and (min-width: 35em) {
-    @content;    
-  }  
+    @media only screen and (min-width: 35em) {
+        @content;
+    }  
 }
 
 @mixin bp-small {
-  @media only screen and (min-width: 25em) {
-    @content;    
-  }  
+    @media only screen and (min-width: 25em) {
+        @content;
+    }
 }
 
 /* ===========================================
@@ -26,10 +26,10 @@
    =========================================== */
 
 @mixin define-breakpoint($name) {
-	&:after {
-		content: $name;
-		display: none;
-	}
+  &:after {
+    content: $name;
+    display: none;
+  }
 }
 
 /* ===========================================
@@ -44,7 +44,7 @@ body {
     @include bp-medium(){
         @include define-breakpoint("bp-medium");
     }
-  
+
     @include bp-huge(){
         @include define-breakpoint("bp-large");
     }
@@ -56,29 +56,27 @@ body {
    =========================================== */
 
 html {
-  height: 100%;
-  transform-style: preserve-3d;
+    height: 100%;
+    transform-style: preserve-3d;
 }
 
 body {
-  margin: 0;
-  text-align: center;
-  font-size: 4vw;
-  font-family: sans-serif;
-  background: #E33D61;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  position: relative;
-  top: 50%;  
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  transform: translateY(-50%);
-  font-weight: normal;
+    margin: 0;
+    text-align: center;
+    font-size: 4vw;
+    font-family: sans-serif;
+    background: #E33D61;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    position: relative;
+    top: 50%;  
+    transform: translateY(-50%);
+    font-weight: normal;
 }
 
 span {
-  display: block;
-  color: #812236;
-  font-weight: bold;
-  font-size: 5.5vw;
+    display: block;
+    color: #812236;
+    font-weight: bold;
+    font-size: 5.5vw;
 }
