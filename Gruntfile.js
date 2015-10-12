@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         ==================================== */
         watch: {
             sass: {
-                files: ['**/*.scss'],
+                files: ['*.scss'],
                 tasks: ['sass:dev', 'autoprefixer'],
                 options: {
                     livereload: true,
